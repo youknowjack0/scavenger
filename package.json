@@ -1,0 +1,18 @@
+{
+    "name": "scavenger",
+    "description": "node.js/jquery board and card game framework",
+    "author": "Jack Langman <youknowjack@gmail.com>",
+    "version": "0.0.1",
+    "dependencies": {
+        "connect": "*",
+        "express": "*",
+        "socket.io": "*"
+    },
+    "devDependencies": {
+        "vows": "*"
+    },
+    "scripts": {
+        "test" : "nodeunit test"
+    },
+    "engine": "node >= 0.6.6"
+}
