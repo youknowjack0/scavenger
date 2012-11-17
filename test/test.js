@@ -5,6 +5,7 @@ exports.testSomething = function(test){
 };
 
 exports.testSomethingElse = function(test){
-    test.ok(false, "this assertion should fail");
+    test.expect(1);
+    test.ok(true, "this assertion should also pass");
     test.done();
 };
