@@ -1,7 +1,7 @@
-var http = require("http");
+var app = require('express')();
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
+var scavenger = require('./server/scavenger.js').createServer(io);
 
-http.createServer(function(request, response) {
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello World");
-  response.end();
-}).listen(41442);
+server.listen(80);
+
