@@ -1,10 +1,10 @@
 var io = require('socket.io-client');
-
+var port = process.env.PORT || 80;
 
 
 exports.socketsGroup = {
     setUp: function(callback) {
-        this.socket = io.connect('http://localhost', {'force new connection': true});
+        this.socket = io.connect('http://localhost', {port:port, 'force new connection': true});
         callback();
     },
     testCanConnect: function(test) {

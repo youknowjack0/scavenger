@@ -3,6 +3,7 @@
    - "0.8"
    - "0.6"
  before_script:
+   - "export PORT=41442"
    - "node server.js &"
  script:
    - "npm test"
